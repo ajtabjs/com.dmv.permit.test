@@ -1,1 +1,286 @@
-"use strict";(self.webpackChunkapp=self.webpackChunkapp||[]).push([[5515],{5515:(V,y,c)=>{c.r(y),c.d(y,{ListPageModule:()=>q});var k=c(2200),S=c(9417),g=c(691),P=c(8132),M=c(467),h=c(2615),$=c(3396),C=c(6901),T=c(703),w=c(4001),e=c(3664),j=c(7408);const L=(i,u)=>u.id;function R(i,u){if(1&i&&(e.j41(0,"span"),e.EFF(1),e.nI1(2,"translate"),e.k0s()),2&i){const t=e.XpG().$implicit;e.R7$(),e.Lme("",e.bMT(2,2,"correct")," ",t.answer_true,"/")}}function D(i,u){if(1&i&&(e.j41(0,"div",14)(1,"div",15)(2,"div",16)(3,"span",17),e.EFF(4),e.k0s()()()()),2&i){const t=e.XpG().$implicit;e.R7$(),e.Y8G("ngStyle",t.styles),e.R7$(3),e.SpI("",t.percent,"%")}}function Q(i,u){1&i&&(e.j41(0,"div",14)(1,"div",18),e.nrm(2,"ion-icon",19),e.k0s()())}function X(i,u){if(1&i){const t=e.RV6();e.j41(0,"div",10),e.bIt("click",function(){const a=h.eBV(t),s=a.$implicit,n=a.$index,f=e.XpG(2);return h.Njj(f.goTest(s,n))}),e.j41(1,"div",11)(2,"div",12),e.EFF(3),e.k0s(),e.j41(4,"div",13),e.nVh(5,R,3,4,"span"),e.j41(6,"span"),e.EFF(7),e.nI1(8,"translate"),e.k0s()()(),e.nVh(9,D,5,2,"div",14)(10,Q,3,0,"div",14),e.k0s()}if(2&i){const t=u.$implicit,r=u.$index,a=e.XpG(2);e.R7$(3),e.SpI(" ",t.name," "),e.R7$(2),e.vxM(t.answer_true>0?5:-1),e.R7$(2),e.Lme("",t.num_question," ",e.bMT(8,5,"questions")),e.R7$(2),e.vxM(a.checkPremium||!a.checkPremium&&r<=a.numberPremium?9:10)}}function O(i,u){if(1&i&&(e.j41(0,"div",7),e.Z7z(1,X,11,7,"div",9,L),e.k0s()),2&i){const t=e.XpG();e.R7$(),e.Dyx(t.datas)}}function G(i,u){1&i&&(e.j41(0,"div",8)(1,"div",20),e.nrm(2,"ion-spinner",21),e.EFF(3),e.nI1(4,"translate"),e.k0s()()),2&i&&(e.R7$(3),e.SpI(" ",e.bMT(4,1,"loading"),"... "))}const W=[{path:"",component:(()=>{class i{constructor(){this.alertCtrl=(0,h.WQX)(g.hG),this.router=(0,h.WQX)(C.Ix),this.route=(0,h.WQX)(C.nX),this.dataServ=(0,h.WQX)($.R),this.storeServ=(0,h.WQX)(T._),this.modalController=(0,h.WQX)(g.W3),this.title=this.route.snapshot.paramMap.get("title"),this.datas=[],this.loadDone=!1,this.id=0,this.checkPremium=this.storeServ.getCheckPremium(),this.numberPremium=4}ngOnInit(){}ionViewDidEnter(){this.loadDone?this.id>0?this.dataServ.countItemList(this.id).then(t=>{let r=0,a=0,s=t.length;if(s>0){for(let n=0;n<s;n++)t[n].answer_practice==t[n].correct?r++:t[n].answer_practice>0&&a++;for(let n=0;n<this.datas.length;n++)if(this.datas[n].id==t[0].state_test_id){this.datas[n].num=s,this.datas[n].learn=r+a,this.datas[n].answer_true=r,this.datas[n].percent=Math.round(100*this.datas[n].learn/this.datas[n].num),this.datas[n].degs=Math.round(360*this.datas[n].percent/100),this.datas[n].styles=this.datas[n].degs<=180?{"background-image":"linear-gradient("+(90+this.datas[n].degs)+"deg, transparent 50%, #e9ebee 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"}:{"background-image":"linear-gradient("+(this.datas[n].degs-90)+"deg, transparent 50%, #F5A623 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"};break}}}):this.dataServ.countItemImage().then(t=>{let r=t.length;if(r>0){let a=Math.ceil(r/this.datas[0].num_question);for(let s=0;s<a;s++){let n=0,f=0,l=this.datas.length-a+s;for(let p=s*this.datas[0].num_question;p<s*this.datas[0].num_question+this.datas[l].num_question;p++)t[p].answer_practice==t[p].correct?n++:t[p].answer_practice>0&&f++;this.datas[l].learn=n+f,this.datas[l].answer_true=n,this.datas[l].num>0?this.datas[l].percent=Math.round(100*this.datas[l].learn/this.datas[l].num):(this.datas[l].learn=0,this.datas[l].percent=0),this.datas[l].degs=Math.round(360*this.datas[l].percent/100),this.datas[l].styles=this.datas[l].degs<=180?{"background-image":"linear-gradient("+(90+this.datas[l].degs)+"deg, transparent 50%, #e9ebee 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"}:{"background-image":"linear-gradient("+(this.datas[l].degs-90)+"deg, transparent 50%, #F5A623 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"}}}}):this.loadStartData()}goTest(t,r){var a=this;return(0,M.A)(function*(){if(a.checkPremium||!a.checkPremium&&r<=a.numberPremium)a.id=t.id,yield a.router.navigate(["practice",{type:t.id,title:t.name,num_question:t.num_question}]);else if(typeof a.storeServ.getProducts()<"u"){const s=yield a.modalController.create({component:w.o});yield s.present();const{data:n}=yield s.onDidDismiss();n&&n.isPremium&&(a.checkPremium=!0)}else yield a.storeServ.toastMessage("This product has not yet been approved for purchase. Please try again")})()}loadList(t){const r=t.length;let a=0;for(let s=0;s<r;s++)t[s].learn=0,t[s].num=0,t[s].answer_true=0,t[s].percent=0,t[s].styles={"background-image":"linear-gradient(90deg, transparent 50%, #e9ebee 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"},this.dataServ.countItemList(t[s].id).then(n=>{let f=0,l=0,p=n.length;if(p>0){for(let o=0;o<p;o++)n[o].answer_practice==n[o].correct?f++:n[o].answer_practice>0&&l++;for(let o=0;o<r;o++)if(t[o].id==n[0].state_test_id){a++,t[o].num=p,t[o].learn=f+l,t[o].answer_true=f,t[o].percent=Math.round(100*t[o].learn/t[o].num),t[o].degs=Math.round(360*t[o].percent/100),t[o].styles=t[o].degs<=180?{"background-image":"linear-gradient("+(90+t[o].degs)+"deg, transparent 50%, #e9ebee 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"}:{"background-image":"linear-gradient("+(t[o].degs-90)+"deg, transparent 50%, #F5A623 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"},a==r&&this.dataServ.countItemImage().then(_=>{let b=_.length;if(b>0){let F=Math.ceil(b/t[0].num_question);for(let m=0;m<F;m++){let x=0,I=0,d={id:-3-m,page:m+1,name:"en"==this.dataServ.getLanguage()?"Traffic Signs Test "+(m+1):"Prueba de se\xf1ales de tr\xe1fico "+(m+1),num_question:t[0].num_question,num:t[0].num_question,learn:0};m==F-1&&(d.num_question=b-m*t[0].num_question,d.num=d.num_question);for(let v=m*t[0].num_question;v<m*t[0].num_question+d.num_question;v++)_[v].answer_practice==_[v].correct?x++:_[v].answer_practice>0&&I++;d.learn=x+I,d.answer_true=x,d.num>0?d.percent=Math.round(100*d.learn/d.num):(d.learn=0,d.percent=0),d.degs=Math.round(360*d.percent/100),d.styles=d.degs<=180?{"background-image":"linear-gradient("+(90+d.degs)+"deg, transparent 50%, #e9ebee 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"}:{"background-image":"linear-gradient("+(d.degs-90)+"deg, transparent 50%, #F5A623 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"},t.push(d)}}});break}}})}resetQuestion(){var t=this;return(0,M.A)(function*(){yield(yield t.alertCtrl.create({header:"Reset All The Questions",message:'Do you want to reset all the questions you have learned? If you choose "OK" all the questions you have learned will be reset and you will have to learn from the beginning.',buttons:[{text:"Cancel",role:"cancel",handler:()=>{}},{text:"Ok",handler:()=>{const a=t.datas.length;for(let s=0;s<a;s++)t.datas[s].percent=0,t.datas[s].answer_true=0,t.datas[s].learn=0,t.datas[s].styles={"background-image":"linear-gradient(90deg, transparent 50%, #e9ebee 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"};t.dataServ.resetAllPracticeQuestion(),t.dataServ.resetAllWrongQuestionDetail()}}]})).present()})()}loadStartData(){this.dataServ.getQuestionType().then(t=>{this.loadList(t),this.datas=t,setTimeout(()=>{this.loadDone=!0},100)})}static#e=this.\u0275fac=function(r){return new(r||i)};static#t=this.\u0275cmp=e.VBU({type:i,selectors:[["app-list"]],standalone:!1,decls:12,vars:3,consts:[[1,"mi-header-background-color"],["slot","start"],[1,"mi-back-button"],["slot","end",1,"mi-header-button"],[1,"mi-header-button-item",3,"click"],["name","refresh"],[1,"main-content"],[1,"list-content"],["slot","fixed",1,"loading-view"],[1,"online-item"],[1,"online-item",3,"click"],[1,"online-item-content"],[1,"online-title"],[1,"online-description"],[1,"item-list-circle"],[1,"active-border",3,"ngStyle"],[1,"circle"],[1,"prec"],[1,"lock-border"],["name","lock-closed"],[1,"spinner-loading"],["name","bubbles"]],template:function(r,a){1&r&&(e.j41(0,"ion-header")(1,"ion-toolbar",0)(2,"ion-buttons",1),e.nrm(3,"ion-back-button",2),e.k0s(),e.j41(4,"ion-title"),e.EFF(5),e.k0s(),e.j41(6,"ion-buttons",3)(7,"div",4),e.bIt("click",function(){return a.resetQuestion()}),e.nrm(8,"ion-icon",5),e.k0s()()()(),e.j41(9,"ion-content",6),e.nVh(10,O,3,0,"div",7),e.nVh(11,G,5,3,"div",8),e.k0s()),2&r&&(e.R7$(5),e.SpI(" ",a.title," "),e.R7$(5),e.vxM(a.datas.length>0?10:-1),e.R7$(),e.vxM(a.loadDone?-1:11))},dependencies:[k.B3,g.QW,g.W9,g.eU,g.iq,g.w2,g.BC,g.ai,g.el,j.D9],styles:[".online-list[_ngcontent-%COMP%]{width:100%}.online-description[_ngcontent-%COMP%]{font-size:15px;color:var(--mi-des-color);padding-top:2px}.online-item[_ngcontent-%COMP%]{padding:8px 10px;display:flex;justify-content:flex-start;align-items:center;background-color:#fff;position:relative;box-shadow:0 0 0 1px #dddfe2;border-radius:4px;margin:10px 8px}.online-item-content[_ngcontent-%COMP%]{width:100%;padding-right:8px}.online-number-content[_ngcontent-%COMP%]{font-size:13px;color:#888;width:30px;height:30px;border-radius:50%;border:1px solid #888888;display:flex;justify-content:center;align-items:center;margin-right:8px}.prec[_ngcontent-%COMP%]{top:10px;position:relative;font-size:12px;margin-top:-20px}.circle[_ngcontent-%COMP%]{position:relative;display:flex;justify-content:center;align-items:center;top:5px;left:5px;width:40px;height:40px;border-radius:100%;background-color:#fff}.active-border[_ngcontent-%COMP%]{position:relative;text-align:center;width:50px;height:50px;border-radius:100%;background-color:var(--mi-warning-color);background-image:linear-gradient(90deg,transparent 50%,var(--mi-main-color) 50%),linear-gradient(90deg,var(--mi-main-color) 50%,transparent 50%)}"]})}return i})()}];let A=(()=>{class i{static#e=this.\u0275fac=function(r){return new(r||i)};static#t=this.\u0275mod=e.$C({type:i});static#n=this.\u0275inj=h.G2t({imports:[P.iI.forChild(W),P.iI]})}return i})(),q=(()=>{class i{static#e=this.\u0275fac=function(r){return new(r||i)};static#t=this.\u0275mod=e.$C({type:i});static#n=this.\u0275inj=h.G2t({imports:[k.MD,S.YN,g.bv,A,j.h]})}return i})()}}]);
+"use strict";
+(self.webpackChunkapp = self.webpackChunkapp || []).push([
+    [5515], {
+        5515: (V, y, c) => {
+            c.r(y), c.d(y, {
+                ListPageModule: () => q
+            });
+            var k = c(2200),
+                S = c(9417),
+                g = c(691),
+                P = c(8132),
+                M = c(467),
+                h = c(2615),
+                $ = c(3396),
+                C = c(6901),
+                T = c(703),
+                w = c(4001),
+                e = c(3664),
+                j = c(7408);
+            const L = (i, u) => u.id;
+
+            function R(i, u) {
+                if (1 & i && (e.j41(0, "span"), e.EFF(1), e.nI1(2, "translate"), e.k0s()), 2 & i) {
+                    const t = e.XpG().$implicit;
+                    e.R7$(), e.Lme("", e.bMT(2, 2, "correct"), " ", t.answer_true, "/")
+                }
+            }
+
+            function D(i, u) {
+                if (1 & i && (e.j41(0, "div", 14)(1, "div", 15)(2, "div", 16)(3, "span", 17), e.EFF(4), e.k0s()()()()), 2 & i) {
+                    const t = e.XpG().$implicit;
+                    e.R7$(), e.Y8G("ngStyle", t.styles), e.R7$(3), e.SpI("", t.percent, "%")
+                }
+            }
+
+            function Q(i, u) {
+                1 & i && (e.j41(0, "div", 14)(1, "div", 18), e.nrm(2, "ion-icon", 19), e.k0s()())
+            }
+
+            function X(i, u) {
+                if (1 & i) {
+                    const t = e.RV6();
+                    e.j41(0, "div", 10), e.bIt("click", function () {
+                        const a = h.eBV(t),
+                            s = a.$implicit,
+                            n = a.$index,
+                            f = e.XpG(2);
+                        return h.Njj(f.goTest(s, n))
+                    }), e.j41(1, "div", 11)(2, "div", 12), e.EFF(3), e.k0s(), e.j41(4, "div", 13), e.nVh(5, R, 3, 4, "span"), e.j41(6, "span"), e.EFF(7), e.nI1(8, "translate"), e.k0s()()(), e.nVh(9, D, 5, 2, "div", 14)(10, Q, 3, 0, "div", 14), e.k0s()
+                }
+                if (2 & i) {
+                    const t = u.$implicit,
+                        r = u.$index,
+                        a = e.XpG(2);
+                    e.R7$(3), e.SpI(" ", t.name, " "), e.R7$(2), e.vxM(t.answer_true > 0 ? 5 : -1), e.R7$(2), e.Lme("", t.num_question, " ", e.bMT(8, 5, "questions")), e.R7$(2), e.vxM(a.checkPremium || !a.checkPremium && r <= a.numberPremium ? 9 : 10)
+                }
+            }
+
+            function O(i, u) {
+                if (1 & i && (e.j41(0, "div", 7), e.Z7z(1, X, 11, 7, "div", 9, L), e.k0s()), 2 & i) {
+                    const t = e.XpG();
+                    e.R7$(), e.Dyx(t.datas)
+                }
+            }
+
+            function G(i, u) {
+                1 & i && (e.j41(0, "div", 8)(1, "div", 20), e.nrm(2, "ion-spinner", 21), e.EFF(3), e.nI1(4, "translate"), e.k0s()()), 2 & i && (e.R7$(3), e.SpI(" ", e.bMT(4, 1, "loading"), "... "))
+            }
+            const W = [{
+                path: "",
+                component: (() => {
+                    class i {
+                        constructor() {
+                            this.alertCtrl = (0, h.WQX)(g.hG), this.router = (0, h.WQX)(C.Ix), this.route = (0, h.WQX)(C.nX), this.dataServ = (0, h.WQX)($.R), this.storeServ = (0, h.WQX)(T._), this.modalController = (0, h.WQX)(g.W3), this.title = this.route.snapshot.paramMap.get("title"), this.datas = [], this.loadDone = !1, this.id = 0, this.checkPremium = this.storeServ.getCheckPremium(), this.numberPremium = 4
+                        }
+                        ngOnInit() {}
+                        ionViewDidEnter() {
+                            this.loadDone ? this.id > 0 ? this.dataServ.countItemList(this.id).then(t => {
+                                let r = 0,
+                                    a = 0,
+                                    s = t.length;
+                                if (s > 0) {
+                                    for (let n = 0; n < s; n++) t[n].answer_practice == t[n].correct ? r++ : t[n].answer_practice > 0 && a++;
+                                    for (let n = 0; n < this.datas.length; n++)
+                                        if (this.datas[n].id == t[0].state_test_id) {
+                                            this.datas[n].num = s, this.datas[n].learn = r + a, this.datas[n].answer_true = r, this.datas[n].percent = Math.round(100 * this.datas[n].learn / this.datas[n].num), this.datas[n].degs = Math.round(360 * this.datas[n].percent / 100), this.datas[n].styles = this.datas[n].degs <= 180 ? {
+                                                "background-image": "linear-gradient(" + (90 + this.datas[n].degs) + "deg, transparent 50%, #e9ebee 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"
+                                            } : {
+                                                "background-image": "linear-gradient(" + (this.datas[n].degs - 90) + "deg, transparent 50%, #F5A623 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"
+                                            };
+                                            break
+                                        }
+                                }
+                            }) : this.dataServ.countItemImage().then(t => {
+                                let r = t.length;
+                                if (r > 0) {
+                                    let a = Math.ceil(r / this.datas[0].num_question);
+                                    for (let s = 0; s < a; s++) {
+                                        let n = 0,
+                                            f = 0,
+                                            l = this.datas.length - a + s;
+                                        for (let p = s * this.datas[0].num_question; p < s * this.datas[0].num_question + this.datas[l].num_question; p++) t[p].answer_practice == t[p].correct ? n++ : t[p].answer_practice > 0 && f++;
+                                        this.datas[l].learn = n + f, this.datas[l].answer_true = n, this.datas[l].num > 0 ? this.datas[l].percent = Math.round(100 * this.datas[l].learn / this.datas[l].num) : (this.datas[l].learn = 0, this.datas[l].percent = 0), this.datas[l].degs = Math.round(360 * this.datas[l].percent / 100), this.datas[l].styles = this.datas[l].degs <= 180 ? {
+                                            "background-image": "linear-gradient(" + (90 + this.datas[l].degs) + "deg, transparent 50%, #e9ebee 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"
+                                        } : {
+                                            "background-image": "linear-gradient(" + (this.datas[l].degs - 90) + "deg, transparent 50%, #F5A623 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"
+                                        }
+                                    }
+                                }
+                            }) : this.loadStartData()
+                        }
+                        goTest(t, r) {
+                            var a = this;
+                            return (0, M.A)(function* () {
+                                if (a.checkPremium || !a.checkPremium && r <= a.numberPremium) a.id = t.id, yield a.router.navigate(["practice", {
+                                    type: t.id,
+                                    title: t.name,
+                                    num_question: t.num_question
+                                }]);
+                                else if (typeof a.storeServ.getProducts() < "u") {
+                                    const s = yield a.modalController.create({
+                                        component: w.o
+                                    });
+                                    yield s.present();
+                                    const {
+                                        data: n
+                                    } = yield s.onDidDismiss();
+                                    n && n.isPremium && (a.checkPremium = !0)
+                                } else yield a.storeServ.toastMessage("This product has not yet been approved for purchase. Please try again")
+                            })()
+                        }
+                        loadList(t) {
+                            const r = t.length;
+                            let a = 0;
+                            for (let s = 0; s < r; s++) t[s].learn = 0, t[s].num = 0, t[s].answer_true = 0, t[s].percent = 0, t[s].styles = {
+                                "background-image": "linear-gradient(90deg, transparent 50%, #e9ebee 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"
+                            }, this.dataServ.countItemList(t[s].id).then(n => {
+                                let f = 0,
+                                    l = 0,
+                                    p = n.length;
+                                if (p > 0) {
+                                    for (let o = 0; o < p; o++) n[o].answer_practice == n[o].correct ? f++ : n[o].answer_practice > 0 && l++;
+                                    for (let o = 0; o < r; o++)
+                                        if (t[o].id == n[0].state_test_id) {
+                                            a++, t[o].num = p, t[o].learn = f + l, t[o].answer_true = f, t[o].percent = Math.round(100 * t[o].learn / t[o].num), t[o].degs = Math.round(360 * t[o].percent / 100), t[o].styles = t[o].degs <= 180 ? {
+                                                "background-image": "linear-gradient(" + (90 + t[o].degs) + "deg, transparent 50%, #e9ebee 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"
+                                            } : {
+                                                "background-image": "linear-gradient(" + (t[o].degs - 90) + "deg, transparent 50%, #F5A623 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"
+                                            }, a == r && this.dataServ.countItemImage().then(_ => {
+                                                let b = _.length;
+                                                if (b > 0) {
+                                                    let F = Math.ceil(b / t[0].num_question);
+                                                    for (let m = 0; m < F; m++) {
+                                                        let x = 0,
+                                                            I = 0,
+                                                            d = {
+                                                                id: -3 - m,
+                                                                page: m + 1,
+                                                                name: "en" == this.dataServ.getLanguage() ? "Traffic Signs Test " + (m + 1) : "Prueba de se\xf1ales de tr\xe1fico " + (m + 1),
+                                                                num_question: t[0].num_question,
+                                                                num: t[0].num_question,
+                                                                learn: 0
+                                                            };
+                                                        m == F - 1 && (d.num_question = b - m * t[0].num_question, d.num = d.num_question);
+                                                        for (let v = m * t[0].num_question; v < m * t[0].num_question + d.num_question; v++) _[v].answer_practice == _[v].correct ? x++ : _[v].answer_practice > 0 && I++;
+                                                        d.learn = x + I, d.answer_true = x, d.num > 0 ? d.percent = Math.round(100 * d.learn / d.num) : (d.learn = 0, d.percent = 0), d.degs = Math.round(360 * d.percent / 100), d.styles = d.degs <= 180 ? {
+                                                            "background-image": "linear-gradient(" + (90 + d.degs) + "deg, transparent 50%, #e9ebee 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"
+                                                        } : {
+                                                            "background-image": "linear-gradient(" + (d.degs - 90) + "deg, transparent 50%, #F5A623 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"
+                                                        }, t.push(d)
+                                                    }
+                                                }
+                                            });
+                                            break
+                                        }
+                                }
+                            })
+                        }
+                        resetQuestion() {
+                            var t = this;
+                            return (0, M.A)(function* () {
+                                yield(yield t.alertCtrl.create({
+                                    header: "Reset All The Questions",
+                                    message: 'Do you want to reset all the questions you have learned? If you choose "OK" all the questions you have learned will be reset and you will have to learn from the beginning.',
+                                    buttons: [{
+                                        text: "Cancel",
+                                        role: "cancel",
+                                        handler: () => {}
+                                    }, {
+                                        text: "Ok",
+                                        handler: () => {
+                                            const a = t.datas.length;
+                                            for (let s = 0; s < a; s++) t.datas[s].percent = 0, t.datas[s].answer_true = 0, t.datas[s].learn = 0, t.datas[s].styles = {
+                                                "background-image": "linear-gradient(90deg, transparent 50%, #e9ebee 50%),linear-gradient(90deg, #e9ebee 50%, transparent 50%)"
+                                            };
+                                            t.dataServ.resetAllPracticeQuestion(), t.dataServ.resetAllWrongQuestionDetail()
+                                        }
+                                    }]
+                                })).present()
+                            })()
+                        }
+                        loadStartData() {
+                            this.dataServ.getQuestionType().then(t => {
+                                this.loadList(t), this.datas = t, setTimeout(() => {
+                                    this.loadDone = !0
+                                }, 100)
+                            })
+                        }
+                        static# e = this.\u0275fac = function (r) {
+                            return new(r || i)
+                        };
+                        static# t = this.\u0275cmp = e.VBU({
+                            type: i,
+                            selectors: [
+                                ["app-list"]
+                            ],
+                            standalone: !1,
+                            decls: 12,
+                            vars: 3,
+                            consts: [
+                                [1, "mi-header-background-color"],
+                                ["slot", "start"],
+                                [1, "mi-back-button"],
+                                ["slot", "end", 1, "mi-header-button"],
+                                [1, "mi-header-button-item", 3, "click"],
+                                ["name", "refresh"],
+                                [1, "main-content"],
+                                [1, "list-content"],
+                                ["slot", "fixed", 1, "loading-view"],
+                                [1, "online-item"],
+                                [1, "online-item", 3, "click"],
+                                [1, "online-item-content"],
+                                [1, "online-title"],
+                                [1, "online-description"],
+                                [1, "item-list-circle"],
+                                [1, "active-border", 3, "ngStyle"],
+                                [1, "circle"],
+                                [1, "prec"],
+                                [1, "lock-border"],
+                                ["name", "lock-closed"],
+                                [1, "spinner-loading"],
+                                ["name", "bubbles"]
+                            ],
+                            template: function (r, a) {
+                                1 & r && (e.j41(0, "ion-header")(1, "ion-toolbar", 0)(2, "ion-buttons", 1), e.nrm(3, "ion-back-button", 2), e.k0s(), e.j41(4, "ion-title"), e.EFF(5), e.k0s(), e.j41(6, "ion-buttons", 3)(7, "div", 4), e.bIt("click", function () {
+                                    return a.resetQuestion()
+                                }), e.nrm(8, "ion-icon", 5), e.k0s()()()(), e.j41(9, "ion-content", 6), e.nVh(10, O, 3, 0, "div", 7), e.nVh(11, G, 5, 3, "div", 8), e.k0s()), 2 & r && (e.R7$(5), e.SpI(" ", a.title, " "), e.R7$(5), e.vxM(a.datas.length > 0 ? 10 : -1), e.R7$(), e.vxM(a.loadDone ? -1 : 11))
+                            },
+                            dependencies: [k.B3, g.QW, g.W9, g.eU, g.iq, g.w2, g.BC, g.ai, g.el, j.D9],
+                            styles: [".online-list[_ngcontent-%COMP%]{width:100%}.online-description[_ngcontent-%COMP%]{font-size:15px;color:var(--mi-des-color);padding-top:2px}.online-item[_ngcontent-%COMP%]{padding:8px 10px;display:flex;justify-content:flex-start;align-items:center;background-color:#fff;position:relative;box-shadow:0 0 0 1px #dddfe2;border-radius:4px;margin:10px 8px}.online-item-content[_ngcontent-%COMP%]{width:100%;padding-right:8px}.online-number-content[_ngcontent-%COMP%]{font-size:13px;color:#888;width:30px;height:30px;border-radius:50%;border:1px solid #888888;display:flex;justify-content:center;align-items:center;margin-right:8px}.prec[_ngcontent-%COMP%]{top:10px;position:relative;font-size:12px;margin-top:-20px}.circle[_ngcontent-%COMP%]{position:relative;display:flex;justify-content:center;align-items:center;top:5px;left:5px;width:40px;height:40px;border-radius:100%;background-color:#fff}.active-border[_ngcontent-%COMP%]{position:relative;text-align:center;width:50px;height:50px;border-radius:100%;background-color:var(--mi-warning-color);background-image:linear-gradient(90deg,transparent 50%,var(--mi-main-color) 50%),linear-gradient(90deg,var(--mi-main-color) 50%,transparent 50%)}"]
+                        })
+                    }
+                    return i
+                })()
+            }];
+            let A = (() => {
+                    class i {
+                        static# e = this.\u0275fac = function (r) {
+                            return new(r || i)
+                        };
+                        static# t = this.\u0275mod = e.$C({
+                            type: i
+                        });
+                        static# n = this.\u0275inj = h.G2t({
+                            imports: [P.iI.forChild(W), P.iI]
+                        })
+                    }
+                    return i
+                })(),
+                q = (() => {
+                    class i {
+                        static# e = this.\u0275fac = function (r) {
+                            return new(r || i)
+                        };
+                        static# t = this.\u0275mod = e.$C({
+                            type: i
+                        });
+                        static# n = this.\u0275inj = h.G2t({
+                            imports: [k.MD, S.YN, g.bv, A, j.h]
+                        })
+                    }
+                    return i
+                })()
+        }
+    }
+]);
