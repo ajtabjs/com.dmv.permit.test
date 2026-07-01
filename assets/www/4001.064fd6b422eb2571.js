@@ -14,7 +14,7 @@
             let B = (() => {
                 class b {
                     constructor() {
-                        this.platform = (0, ne.WQX)(Ne.OD), this.loadingCtrl = (0, ne.WQX)(K.Xi), this.toastCtrl = (0, ne.WQX)(K.K_), this.network = (0, ne.WQX)(Q.l), this.dataServ = (0, ne.WQX)(p.R), this.checkPremium = !1, this.checkTransaction = !1, this.productPremium = null, this.products = []
+                        this.platform = (0, ne.WQX)(Ne.OD), this.loadingCtrl = (0, ne.WQX)(K.Xi), this.toastCtrl = (0, ne.WQX)(K.K_), this.network = (0, ne.WQX)(Q.l), this.dataServ = (0, ne.WQX)(p.R), this.checkPremium = !0, this.checkTransaction = !1, this.productPremium = null, this.products = []
                     }
                     loadStartStore() {
                         this.dataServ.getPremium().then(C => {
@@ -55,7 +55,7 @@
                         }]) : this.store.initialize([{
                             platform: this.store.TEST
                         }]), this.store.ready(() => {
-                            this.products = JSON.parse(JSON.stringify(this.store.products)), this.checkTransaction || (this.checkPremium = !1, this.dataServ.updatePremium(1, {}))
+                            this.products = JSON.parse(JSON.stringify(this.store.products))
                         })
                     }
                     purchase(C) {
